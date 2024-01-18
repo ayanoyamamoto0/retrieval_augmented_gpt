@@ -31,4 +31,4 @@
 
 #### Comparison between conversational assistants built with GPT 3.5 Turbo and Rasa
 The outputs generated in response to a query string "I’m interested in the ethics of Artificial Intelligence"
-<img src="https://github.com/ayanoyamamoto0/retrieval_augmented_gpt/blob/main/comparison.png" width=40% height=40%>
+<img src="https://github.com/ayanoyamamoto0/retrieval_augmented_gpt/blob/main/comparison.png" width=80% height=40%>
