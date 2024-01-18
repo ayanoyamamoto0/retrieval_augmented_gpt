@@ -29,3 +29,6 @@
 * [gpt3.5turbo_custom_db.py](https://github.com/ayanoyamamoto0/retrieval_augmented_gpt/blob/main/gpt3.5turbo_custom_db.py) transforms the corpus into a vector database.
 * Creates a conversational assistant which answers questions based on the retrieved documents from the database.
 
+#### Comparison between conversational assistants built with GPT 3.5 Turbo and Rasa
+The outputs generated in response to a query string "I’m interested in the ethics of Artificial Intelligence"
+<img src="https://github.com/ayanoyamamoto0/retrieval_augmented_gpt/blob/main/comparison.png" width=40% height=40%>
