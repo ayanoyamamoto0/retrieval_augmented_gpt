@@ -1,0 +1,315 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+    - hello world
+    - hi there
+    - heya
+    - hiya
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - yep
+    - yeah
+    - I think so
+    - I'd like that
+    - yes please
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - No thank you
+    - No that's okay
+    - nope
+    - No I don't want a callback
+    - please don't
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: request_callback
+  examples: |
+    - callback
+    - calback
+    - Call back
+    - callbakc
+    - callbac
+- intent: course_interest
+  examples: |
+    - I'd like to study a course that includes lab work
+    - I want to study computer science
+    - I want to learn about nanotechnology
+    - I'm interested in the ethics of Artificial Intelligence
+    - I already work in real estate and I want to skill up
+    - I work as a social media manager
+    - I work in criminal justice system
+    - I want to do an internship related to cyber security
+    - My dream is to perform on stage in an orchestra
+    - I became interested in immunology after the COVID-19
+    - I am concerned about environmental issues
+    - I'm an international student and need support with English
+    - I'm not sure what I want to do now, I'm looking for a flexible course
+    - I would like to be in a job placement programme after I graduate
+    - I want to work in the EU policy making in the future
+    - I want to study about cyber security
+    - I'm interested in data science
+    - I'm passionate about writing codes
+    - I want to become a social media manager
+    - I'm interested in chemistry
+    - I want to study law
+    - What about business administration?
+    - I also want to study civil engineering
+    - Do you have anything related to sports?
+    - I'm also interested in contstruction
+    - Maths and statistics
+    - Something related to business and management
+    - Science
+    - Engineering
+    - What about tourism?
+    - I also want to learn about event management
+    - Social care management and leadership
+    - Something related to languages
+    - Do you have a journalism course
+    - Do you have a course in maths or statistics
+    - Do you have a course in data science
+- intent: give_first_name
+  examples: |
+    - It's [Emily](first_name)
+    - I'm [Grace](first_name)
+    - [Fiadh](first_name)
+    - My first name is [Sophie](first_name)
+    - My name is [Lily](first_name)
+    - This is [Éabha](first_name)
+    - I'm [Ava](first_name)
+    - It's [Mia](first_name)
+    - [Ellie](first_name)
+    - My first name is [Olivia](first_name)
+    - This is [Emma](first_name)
+    - I'm [Amelia](first_name)
+    - It's [Hannah](first_name)
+    - [Ella](first_name)
+    - My name is [Freya](first_name)
+    - My first name is [Lucy](first_name)
+    - I'm [Isla](first_name)
+    - [Saoirse](first_name)
+    - My name is [Millie](first_name)
+    - [Sadie](first_name)
+    - My first name is [Jack](first_name)
+    - [Noah](first_name)
+    - It's [James](first_name)
+    - This is [Rían](first_name)
+    - My name is [Charlie](first_name)
+    - [Oisín](first_name)
+    - I'm [Tadhg](first_name)
+    - My first name is [Liam](first_name)
+    - [Daniel](first_name)
+    - It's [Fionn](first_name)
+    - My name is [Michael](first_name)
+    - I'm [Conor](first_name)
+    - [Finn](first_name)
+    - My first name is [Patrick](first_name)
+    - It's [Thomas](first_name)
+    - My name is [Darragh](first_name)
+    - This is [Harry](first_name)
+    - [Sean](first_name)
+    - I'm [Luke](first_name)
+    - [Robert](first_name)
+    - [Ayano](first_name)
+- intent: give_last_name
+  examples: |
+    - It's [Murphy](last_name)
+    - [Kelly](last_name)
+    - [Walsh](last_name)
+    - [O'Connor](last_name)
+    - [O'Sullivan](last_name)
+    - It's [Byrne](last_name)
+    - [O'Brien](last_name)
+    - [Ryan](last_name)
+    - [Smith](last_name)
+    - It's [O'Neill](last_name)
+    - [O'Reilly](last_name)
+    - [McCarthy](last_name)
+    - My last name is [Doyle](last_name)
+    - [Brown](last_name)
+    - [Murray](last_name)
+    - [Doherty](last_name)
+    - [Burke](last_name)
+    - My last name is [Lynch](last_name)
+    - It's [McLaughlin](last_name)
+    - [Quinn](last_name)
+    - [Kennedy](last_name)
+    - [Moore](last_name)
+    - [Gallagher](last_name)
+    - My last name is [Johnston](last_name)
+    - [Campbell](last_name)
+    - [Brennan](last_name)
+    - [Clarke](last_name)
+    - [Wilson](last_name)
+    - It's [Dunne](last_name)
+    - [Daly](last_name)
+    - [O'Connell](last_name)
+    - [Martin](last_name)
+    - [Whelan](last_name)
+    - My last name is [Flynn](last_name)
+    - [McMahon](last_name)
+    - [Farrell](last_name)
+    - [Carroll](last_name)
+    - It's [Collins](last_name)
+    - [Nolan](last_name)
+    - [Connolly](last_name)
+    - [O'Donoghue](last_name)
+    - My last name is [Thompson](last_name)
+    - It's [Fitzgerals](last_name)
+    - [Hughes](last_name)
+    - [Maguire](last_name)
+    - [O'Donnell](last_name)
+    - [White](last_name)
+    - It's [McGrath](last_name)
+    - [Duffy](last_name)
+    - [Kavanagh](last_name)
+    - [Collins](last_name)
+    - [Ross](last_name)
+    - [Yamamoto]
+- intent: give_phone_number
+  examples: |
+    - [555-1234](phone_number)
+    - [012 889 5608](phone_number)
+    - [157-486-0243](phone_number)
+    - [100-7921](phone_number)
+    - [311-709-2159](phone_number)
+    - It's [584-996-0894](phone_number)
+    - Call me at [498 758 3258](phone_number)
+    - You can reach me at [092-798-8447](phone_number)
+    - call me at [+353-1-220-5610](phone_number)
+    - please call me at [+33-01-220-5634](phone_number)
+    - [+81 (0)1 220 5596](phone_number)
+    - [+82 2 3290 5177](phone_number)
+    - [0035312205594](phone_number)
+    - [514-846-0419](phone_number)
+    - call me at [(01) 716 5900](phone_number)
+    - you can reach me at [012205615](phone_number)
+    - please call me at [+353-1-220-5601](phone_number)
+    - please call [+49 30 203040](phone_number)
+    - Call [086 220 5627](phone_number)
+    - [083 172 4918](phone_number)
+    - [083 392 0381](phone_number)
+- intent: give_email_address
+  examples: |
+    - [john.smith@email.com](email_address)
+    - [jane.doe@tudublin.ie](email_address)
+    - [alex.johnson@gmail.com](email_address)
+    - [sarah.lee@yahoo.com](email_address)
+    - [michael.brown@mit.edu](email_address)
+    - [emily.chen@unibocconi.legalmail.it](email_address)
+    - [john.kim@cloudflare.com](email_address)
+    - [rachel.nguyen@flickr.com](email_address)
+    - It's [brian.x.gillespie@tudublin.ie](email_address)
+    - My email address is [dympna.osullivan@universite-paris-saclay.fr](email_address)
+    - My email is [bojan.bozic@u-tokyo.ac.jp](email_address)
+    - You can reach me at [fvshiller@lmu-misu.de](email_address)
+    - my email is [tom.lestrange@korea.ac.kr](email_address)
+    - [msvonbechtolsheim@tcd.ie](email_address)
+    - [vmckyrrellyb@ucsd.edu](email_address)
+    - [kdanzelmanc@1und1.de](email_address)
+    - [aalflatd@51.la](email_address)
+    - My email address is [bguidellie@mapquest.com](email_address)
+    - [bwoffendenf@desdev.cn](email_address)
+    - My email is [omissingtong@google.it](email_address)
+    - You can reach me at [jhaselhursth@bravesites.com](email_address)
+    - [kmalacridai@harvard.edu](email_address)
+    - [hboschej@creativecommons.org](email_address)
+    - Please email at [ccartmerk@gnu.org](email_address)
+    - Email me at [dsmedmoorp@google.co.uk](email_address)
+    - [d21125676@tudublin.ie](email_address)
+- intent: give_day_time
+  examples: |
+    - Would it be possible to schedule a call for [next Tuesday at 2 PM](day_time)?
+    - I'm available on [Thursday mornings](day_time), would that work for you?
+    - I'm free on [Monday afternoons](day_time), would that be a good time for a call?
+    - Would it be possible to schedule a call for [Friday at 10 AM](day_time)?
+    - I'm available on [Wednesday afternoons](day_time), would that work for you?
+    - How about we schedule a call for [next Monday at 3 PM](day_time)?
+    - [Thursdays](day_time) are usually good for me, would that be a good day for a call?
+    - [Tuesday or Thursday mornings](day_time)
+    - [around lunch time on Monday](day_time)
+    - [Monday lunch time](day_time)
+    - [Tuesday before lunch](day_time)
+    - [tuesday evening](day_time)
+    - [Wednesdays at 2pm](day_time)
+    - [Thursday 19:00](day_time)
+    - [Next Friday at 5](day_time)
+    - [Friday afternoon](day_time)
+    - [Saturday mornings](day_time)
+    - [Sundays at 21:00](day_time)
+    - [at lunch time any day](day_time)
+    - [any day before 9:00](day_time)
+    - [any time after lunch](day_time)
+    - [anytime before 2](day_time)
+    - [any time](day_time)
+    - [Mondays or Fridays](day_time)
+- intent: stop
+  examples: |
+    - stop
+    - nevermind
+    - please stop
+    - i want to stop
+    - stop the form
+    - exit
+    - end
+    - quit
+    - Actually I changed my mind
+    - can we stop this?
+    - Can we stop please
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thanks, goodbye
+    - bye now
+    - thanks, bye!
+    - you too
+    - thanks
+- intent: no_interest
+  examples: |
+    - I'm not sure.
+    - I don't know yet.
+    - I haven't decided.
+    - I'm still exploring my options.
+    - I don't have a specific field in mind.
+    - I'm open to suggestions.
+    - I'm not sure what I want to study.

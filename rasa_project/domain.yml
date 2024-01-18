@@ -1,0 +1,94 @@
+version: '3.1'
+intents:
+- affirm
+- bot_challenge
+- course_help
+- course_interest
+- deny
+- give_day_time
+- give_details
+- give_email_address
+- give_first_name
+- give_last_name
+- give_phone_number
+- goodbye
+- greet
+- no_interest
+- request_callback
+- stop
+entities:
+- last_name
+- email_address
+- day_time
+- first_name
+- phone_number
+slots:
+  first_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: first_name
+  last_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: last_name
+  phone_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: phone_number
+  email_address:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: email_address
+  day_time:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: day_time
+forms:
+  callback_form:
+    required_slots:
+    - first_name
+    - last_name
+    - phone_number
+    - email_address
+    - day_time
+responses:
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_interest:
+  - text: Hello! I'm here to help you find the perfect course for you at TU Dublin. What are you passionate about or what field would you like to study?
+  utter_ask_callback:
+  - text: If you would like to request a callback from a university officer to discuss your options, please type "callback".
+  utter_ask_details:
+  - text: Sure! We'll ask you for a few details to arrange a call.
+  utter_submit:
+  - text: Thank you {first_name}. We will arrange for a university officer to contact you and discuss your options at the suggested day/time. You will receive an email from us shortly to confirm the details.
+  utter_anything_else:
+  - text: If there are any other interests you would like to discuss, please let us know.
+  utter_ask_callback_form_first_name:
+  - text: Please tell us your first name.
+  utter_ask_callback_form_last_name:
+  - text: Please tell us your last name.
+  utter_ask_callback_form_phone_number:
+  - text: Please tell us your phone number.
+  utter_ask_callback_form_email_address:
+  - text: Please tell us your email address.
+  utter_ask_callback_form_day_time:
+  - text: Which day/time of the week is the most convenient for you to receive a callback?
+  utter_thank_you:
+  - text: Thank you for your interest in TU Dublin! If you have any further questions or would like more information, please don't hesitate to reach out to us. Have a great day!
+  utter_goodbye:
+  - text: Bye!
+  utter_assurance:
+  - text: Don't worry if you're not sure yet. We can work together to find a course for you based on your strengths and interests.
+actions:
+- action_recommend_course
+- action_export_form_to_csv
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+assistant_id: 20231113-162414-dry-budget

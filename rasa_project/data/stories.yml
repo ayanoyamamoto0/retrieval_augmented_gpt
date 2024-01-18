@@ -1,0 +1,99 @@
+version: "3.1"
+
+stories:
+
+- story: ask interest
+  steps:
+  - intent: greet
+  - action: utter_ask_interest
+  - intent: course_interest
+  - action: action_recommend_course
+  - action: utter_ask_callback
+  - checkpoint: check_ask_callback
+
+- story: no interest
+  steps:
+  - intent: greet
+  - action: utter_ask_interest
+  - intent: no_interest
+  - action: utter_assurance
+  - action: utter_ask_callback
+  - checkpoint: check_ask_callback
+
+- story: ask callback - yes
+  steps:
+  - checkpoint: check_ask_callback
+  - or:
+    - intent: request_callback
+    - intent: affirm
+  - action: utter_ask_details
+  - action: callback_form
+  - active_loop: callback_form
+  - slot_was_set:
+    - requested_slot: first_name
+  - slot_was_set:
+    - first_name: john
+  - slot_was_set:
+    - requested_slot: last_name
+  - slot_was_set:
+    - last_name: doe
+  - slot_was_set:
+    - requested_slot: phone_number
+  - slot_was_set:
+    - phone_number: 01 220 5000
+  - slot_was_set:
+    - requested_slot: email_address
+  - slot_was_set:
+    - email_address: john.smith@email.com
+  - slot_was_set:
+    - requested_slot: day_time
+  - slot_was_set:
+    - day_time: next Tuesday at 2 PM
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_export_form_to_csv
+  - action: utter_submit
+  - action: utter_anything_else
+  - checkpoint: check_anything_else_slots_filled
+
+
+- story: ask callback - no
+  steps:
+  - checkpoint: check_ask_callback
+  - intent: deny
+  - action: utter_anything_else
+  - checkpoint: check_anything_else_slots_empty
+
+- story: anything else - yes - slots are set
+  steps:
+  - checkpoint: check_anything_else_slots_filled
+  - intent: course_interest
+  - action: action_recommend_course
+  - action: utter_anything_else
+  - checkpoint: check_anything_else_slots_filled
+
+- story: anything else - yes - no slots set
+  steps:
+  - checkpoint: check_anything_else_slots_empty
+  - intent: course_interest
+  - action: action_recommend_course
+  - action: utter_ask_callback
+  - checkpoint: check_ask_callback
+  
+- story: anything else - no - slots are set
+  steps:
+  - checkpoint: check_anything_else_slots_filled
+  - intent: deny
+  - action: utter_thank_you
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: anything else - no - no slots set
+  steps:
+  - checkpoint: check_anything_else_slots_empty
+  - intent: deny
+  - action: utter_thank_you
+  - intent: goodbye
+  - action: utter_goodbye
+
